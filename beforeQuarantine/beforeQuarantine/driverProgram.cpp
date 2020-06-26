@@ -14,7 +14,9 @@ int main()
 	cout << "\n********************************* Data extracted from keyboard ********************************\n";
 
 	testobj.readfromKB().print();   //to interact with keyboard and get data through keyboard at runtime
-	cout << "\n************************ False vlaues to setter functions to inspect validate functions working ****************************\n";
+	
+	cout << "\n********************** False vlaues to setter functions to inspect validate functions working ************************\n";
+	
 	testobj.setday(32).print();     // Set false values for inspecting of validation functions working
 
 	testobj.setMonth(13).print();     //to check validate function works accurately on single components/data members or not 

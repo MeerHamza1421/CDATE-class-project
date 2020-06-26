@@ -1,26 +1,43 @@
 #include<iostream>
-#pragma once
+#pragma once				//Add for the ease of linker which restrict linker and avoid to make instanctaneous copies of class
 using namespace std;
+
+// Defining class CDATE
+
 class CDATE {
+	// ------------------ Private members and methods ----------------------------
 	int year, month, day;
 	void validate();
+	//------------------ Public members and methods -----------------------------
 public:
+
+	//--------------------- Declaring members ------------------------------------
+
 	CDATE();
 	CDATE(int day, int month, int year);
 	CDATE(const CDATE& ctr);
 	~CDATE();
 	void print();
 	bool isLeapyear();
-	CDATE& readfromKB();
+
+	// -------------------Setters Functions ------------------------
+	
+	CDATE& readfromKB();  //   make referance return type to enable cascading in these functions 
 	CDATE& setday(int day);
 	CDATE& setMonth(int month);
 	CDATE& setYear(int year);
 	CDATE& setDate(int day, int month, int year);
-	int getMonth();
+	
+	//------------------- Getter Functions ---------------------------
+	
+	int getMonth();   
 	int getYear();
 	int getDay();
 };
-void CDATE::validate()
+
+// ------------------------------- Defining members functons of class ----------------------------------
+
+void CDATE::validate()    // validate functions to validate data given by user to avoid unexpected results 
 {
 	if (this->month < 1 || this->month>12)
 	{
@@ -90,24 +107,28 @@ void CDATE::validate()
 		}
 	}
 }
-CDATE::CDATE()
+
+CDATE::CDATE()   // Initializer constructor
 {
 	this->day = 0;
 	this->month = 0;
 	this->year = 0;
 }
-CDATE::CDATE(int day, int month, int year)
+
+CDATE::CDATE(int day, int month, int year)  //Parameterize constructor
 {
 	this->year = year;
 	this->month = month;
 	this->day = day;
 	this->validate();
 }
-void CDATE::print()
+
+void CDATE::print() //Print function to display values on console 
 {
-	cout << endl<<this->day << "/\t" << this->month << "/\t" << this->year<<endl<<endl;
+	cout << endl<<this->day << "  -  " << this->month << "  -  " << this->year<<endl<<endl;
 }
-CDATE& CDATE::readfromKB()
+
+CDATE& CDATE::readfromKB()  //Function to get data from keyboard in runtime
 {
 	cout << "please enter the date\n";
 	cout << "Enter the day date\n";
@@ -120,7 +141,8 @@ CDATE& CDATE::readfromKB()
 	cout << "\n";
 	return *this;
 }
-bool CDATE::isLeapyear()
+
+bool CDATE::isLeapyear() //Another validate type of function to check given Year is a leap year or not
 {
 	if (!(this->year % 4))
 		return true;
@@ -128,33 +150,39 @@ bool CDATE::isLeapyear()
 	else
 		return false;
 }
-CDATE::CDATE(const CDATE& copy)
+
+CDATE::CDATE(const CDATE& copy) //Copy constructor to make Copies of an object
 {
 	this->day = copy.day;
 	this->month = copy.month;
 	this->year = copy.year;
 }
-CDATE::~CDATE()
+
+CDATE::~CDATE()  //Destructor
 { }
-CDATE& CDATE::setday(int day)
+
+CDATE& CDATE::setday(int day)  //Setter function to set value of day 
 {
 	this->day = day;
 	this->validate();
 	return *this;
 }
-CDATE& CDATE::setMonth(int month)
+
+CDATE& CDATE::setMonth(int month)  //Setter function to set value of month
 {
 	this->month = month;
 	this->validate();
 	return *this;
 }
-CDATE& CDATE::setYear(int year)
+
+CDATE& CDATE::setYear(int year)  //Setter function to set value of Year
 {
 	this->year = year;
 	this->validate();
 	return *this;
-}
-CDATE& CDATE::setDate(int day, int month, int year)
+} 
+
+CDATE& CDATE::setDate(int day, int month, int year)  //Setter function to set new value of whole date
 {
 	 this->day= day ;
 	 this->month= month;
@@ -162,15 +190,20 @@ CDATE& CDATE::setDate(int day, int month, int year)
 	 this->validate();
 	return *this;
 }
-int CDATE::getDay()
+
+int CDATE::getDay() //Function to get value of Day
 {
 	return this->day;
 }
-int CDATE::getMonth()
+
+int CDATE::getMonth() //Function to get value of month
 {
 	return this->month;
 }
-int CDATE::getYear()
+
+int CDATE::getYear() //Function to get value of Year
 {
 	return this->year;
 }
+
+
