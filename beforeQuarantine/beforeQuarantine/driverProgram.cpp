@@ -2,8 +2,8 @@
 using namespace std;
 int main()
 { 
-	cout << "\n***************************** NonParameterize Constructor Call **********************\n";
-	CDATE testobj1;   //As we constructor overloading done in our header file this set value of data member to zero 
+	cout << "\n***************************** Non Parameterize Constructor Call **********************\n";
+	CDATE testobj1;   //As constructor overloading done in our header file this set value of data member to zero 
 	
 	testobj1.print();  //to inspect constructor set values of data members to zero or not as set in header file
 	cout << "\n**************************** Parameterize Constructor ****************************\n";
