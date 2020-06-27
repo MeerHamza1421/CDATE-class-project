@@ -1,5 +1,5 @@
 #include<iostream>
-#pragma once				//Add for the ease of linker which restrict linker and avoid to make instanctaneous copies of class
+#pragma once				//Add for the ease of linker which restrict linker and avoid to make instantaneous copies of class
 using namespace std;
 
 // Defining class CDATE
