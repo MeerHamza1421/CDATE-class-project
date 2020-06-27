@@ -82,9 +82,9 @@ void CDATE::validate()    // validate functions to validate data given by user t
 	}
 
 	//Due to this functionality days and month related to each other if you give wrong value of month it also store -1 as a value in days
-	// but if you give wrong value of days if will not affect the value of months 
+	// but if you give wrong value of days it will not affect the value of months 
 	
-	if (this->day < 1 || this->day > CDATE :: daysOfmonth[this->month] )  
+	if (this->day < 1 || this->day > CDATE::daysOfmonth[this->month])  
 	{
 		cerr << "\nyou type wrong input, days range from 1 to " << CDATE::daysOfmonth[this->month] << "\n";
 		this->day = -1;
@@ -109,8 +109,10 @@ void CDATE::print(int opt) //Print function to display values on console
 {
 	if (opt == 1)
 		cout << endl << this->day << "  -  " << this->month << "  -  " << this->year << endl << endl;
+
 	else if (opt == 2)
 		cout << endl << this->day << "  " << this->strMonth[this->month] << "  ,  " << this->year << endl;
+
 	else if(opt==3)
 		cout << endl << this->day << "  " << this->stringMonth[this->month] << " , " << this->year << endl;
 	
@@ -121,11 +123,14 @@ CDATE& CDATE::readfromKB()  //Function to get data from keyboard in runtime
 	cout << "please enter the date\n";
 	cout << "Enter the day date\n";
 	cin >> this->day;
+
 	cout << "Enter the month\n";
 	cin >> this->month;
+
 	cout << "Enter the year\n";
 	cin >> this->year;
 	this->validate();
+
 	cout << "\n";
 	return *this;
 }
@@ -196,14 +201,14 @@ int CDATE::getYear() //Function to get value of Year
 
 // ------------------------------- Defining Static Methods ----------------------------------------
 
-/*void CDATE::setMindate(int day,int month,int year)
+void CDATE::setMindate(int day,int month,int year)
 {
 	if ((day > 1 && day < 10) && (month > 1 && month > 12) && (year > 2000 && year < 2010))
 	{
-		CDATE::minDate.CDATE::setDate(day, month, year);
+		minDate.setDate(day, month, year);
 	}
 }
-*/
+
 /*void CDATE::setMaxdate(int day, int month, int year)
 {
 
