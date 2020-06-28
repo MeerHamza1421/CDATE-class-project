@@ -205,7 +205,7 @@ void CDATE::setMindate(int day,int month,int year)
 {
 	if ((day > 1 && day < 10) && (month > 1 && month > 12) && (year > 2000 && year < 2010))
 	{
-		minDate.setDate(day, month, year);
+		CDATE::minDate.setDate(day, month, year);
 	}
 }
 

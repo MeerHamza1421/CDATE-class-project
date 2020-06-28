@@ -31,17 +31,17 @@ int main()
 	cout << "*********************************************************************";
 	testobj.setday(12);  //to set day seprately
 
-	cout << "\nFrom day value setter funciton: \t" << testobj.getDay() 
+	cout << "\nValue from day setter funciton: \t" << testobj.getDay() 
 		<< endl;  //Day value getter function to get setted day date
 
 	testobj.setMonth(3);      //to set month seprately
 
-	cout << "\nFrom Month value setter funciton:\t" << testobj.getMonth() 
+	cout << "\nValue from Month setter funciton:\t" << testobj.getMonth() 
 		<< endl;  //Month value getter function to get setted month value
 	
 	testobj.setYear(2000);  //to set year seperately
 
-	cout << "\nFrom Year value setter funciton:\t" << testobj.getYear() 
+	cout << "\nValue from Year setter funciton:\t" << testobj.getYear() 
 		<< endl;  //Year value getter function to get setted Year value
 
 	cout << "\n********************* Copy constructor ****************************\n";
