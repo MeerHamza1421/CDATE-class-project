@@ -1,3 +1,0 @@
-﻿  driverCode.cpp
-driverCode.obj : error LNK2001: unresolved external symbol "private: static class CDATE CDATE::minDate" (?minDate@CDATE@@0V1@A)
-E:\codes\c++ files\CDATE-Class-Project\onlineClass_Week1\Debug\onlineClass_Week1.exe : fatal error LNK1120: 1 unresolved externals
