@@ -1,3 +1,0 @@
-E:/codes/c++ files/CDATE-Class-Project/onlineClass_Week1/cmake-build-debug/CMakeFiles/onlineClass_Week1.dir
-E:/codes/c++ files/CDATE-Class-Project/onlineClass_Week1/cmake-build-debug/CMakeFiles/edit_cache.dir
-E:/codes/c++ files/CDATE-Class-Project/onlineClass_Week1/cmake-build-debug/CMakeFiles/rebuild_cache.dir
