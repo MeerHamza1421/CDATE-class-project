@@ -4,6 +4,7 @@
 
 #ifndef ONLINECLASS_WEEK1_CDATE_H
 #define ONLINECLASS_WEEK1_CDATE_H
+
 class CDATE {
     // ------------------ Private members and methods ----------------------------
     int year, month, day;

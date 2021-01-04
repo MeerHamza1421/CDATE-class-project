@@ -1,13 +1,10 @@
 #include "CDATE.h"
 #include <iostream>
 using namespace std;
-int main()
-{
+int main() {
     //As constructor overloading done in our header file this set value of data member to zero
     CDATE testobj1;
-
     testobj1.userinteracton();
-
     cout << "\n**************************** Parameterize Constructor ****************************\n";
     CDATE testobj(28,2,2001);   //work as parameterize constructor
 
@@ -51,5 +48,5 @@ int main()
     CDATE dummyTestobj(testobj);  //to Call copy constructor
 
     dummyTestobj.print(testobj1.option); //to inspect copy constructor works properly or not
-}
 
+}

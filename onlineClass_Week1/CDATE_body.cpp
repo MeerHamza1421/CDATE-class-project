@@ -4,7 +4,7 @@ using namespace std;
 
 CDATE minDate, maxDate;
 
-int CDATE::daysOfmonth[13] = { 0, 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31 };
+int CDATE::daysOfmonth[13] = { 0, 31 , 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31 };
 
 char CDATE::strMonth[13][4] = { {""},{"Jan"},{"Feb"},{"Mar"},{"Apr"},{"May"},{"Jun"},{"Jul"},{"Aug"},{"Sep"},{"Oct"},{"Nov"},{"Dec"} };
 
@@ -29,7 +29,7 @@ void CDATE::userinteracton()
 void CDATE::validate()    // validate functions to validate data given by user to avoid unexpected results
 {
 
-    if (CDATE::setMaxdate(this->day, this->month, this->year)&& CDATE::setMindate(this->day, this->month, this->year))
+    if (CDATE::setMaxdate(this->day, this->month, this->year) && CDATE::setMindate(this->day, this->month, this->year))
     {
 
         if (this->month < 1 || this->month > 12) {
@@ -81,7 +81,6 @@ void CDATE::print(int opt) //Print function to display values on console
 
 CDATE& CDATE::readfromKB()  //Function to get data from keyboard in runtime
 {
-    cout<<endl;
     cout << "please enter the date\n";
     cout << "Enter the day date\n";
     cin >> this->day;
@@ -101,7 +100,6 @@ bool CDATE::isLeapyear() //Another validate type of function to check given Year
 {
     if (!(this->year % 4))
         return true;
-
     else
         return false;
 }
